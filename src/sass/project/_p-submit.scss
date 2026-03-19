@@ -1,0 +1,161 @@
+@use "../global" as *;
+
+.p-submit {
+  background-color: #54c3f1;
+  padding-top: rem(64);
+  padding-bottom: rem(64);
+  position: relative;
+
+  @include mq("md") {
+    padding-top: rem(96);
+    padding-bottom: rem(96);
+  }
+}
+
+.p-submit::before {
+  position: absolute;
+  content: '';
+  background: url(../images/common/submit-deco-left.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  aspect-ratio: 399 / 282;
+  object-fit: cover;
+  width: rem(399);
+  height: auto;
+  bottom: 0;
+  left: 0;
+}
+
+.p-submit::after {
+  position: absolute;
+  content: '';
+  background: url(../images/common/submit-deco-right.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  aspect-ratio: 399 / 282;
+  object-fit: cover;
+  width: rem(415);
+  height: auto;
+  top: 0;
+  right: 0;
+}
+
+.p-submit__content {
+  position: relative;
+  text-align: center;
+}
+
+.p-submit__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.p-submit__title {
+  color: $white;
+  font-size: rem(28);
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+  position: relative;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include mq("md") {
+    font-size: rem(36);
+  }
+}
+
+.p-submit__title::before {
+  position: absolute;
+  content: '';
+  background: url(../images/common/submit_icon.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  aspect-ratio: 22 / 24;
+  object-fit: cover;
+  width: rem(22);
+  height: auto;
+  top: rem(-8);
+  right: rem(-24);
+}
+
+.p-submit__btn {
+  margin-top: rem(32);
+  width: 100%;
+  max-width: rem(500);
+  height: rem(80);
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #f6ab00;
+  border-radius: rem(4);
+  box-shadow: 0 rem(5) 0 #cf9000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: rem(16);
+  color: $white;
+}
+
+.p-submit__btn-text {
+  font-size: rem(18);
+  font-weight: 800;
+  letter-spacing: 0.05em;
+
+  @include mq("md") {
+    font-size: rem(21);
+  }
+}
+
+.p-submit__btn-icon {
+  width: rem(34);
+  height: rem(34);
+  display: block;
+}
+
+.p-submit__btn-icon img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.p-submit__deco {
+  position: absolute;
+  width: rem(240);
+  pointer-events: none;
+}
+
+.p-submit__deco--left {
+  left: rem(-20);
+  bottom: 0;
+}
+
+.p-submit__deco--right {
+  right: rem(-20);
+  top: 0;
+}
+
+.p-submit__deco img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@include mq("md") {
+  .p-submit__deco {
+    width: rem(399);
+  }
+
+  .p-submit__deco--left {
+    left: rem(-110);
+    bottom: 0;
+  }
+
+  .p-submit__deco--right {
+    right: rem(-110);
+    top: 0;
+  }
+}
