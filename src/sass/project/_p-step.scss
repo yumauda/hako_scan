@@ -3,11 +3,42 @@
 .p-step {
   padding-top: rem(64);
   padding-bottom: rem(64);
+  position: relative;
 
   @include mq("md") {
     padding-top: rem(96);
-    padding-bottom: rem(96);
+    padding-bottom: rem(120);
   }
+}
+
+.p-step::before {
+  position: absolute;
+  content: '';
+  background: url(../images/common/step_left.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: rem(399);
+  height: auto;
+  aspect-ratio: 399 / 282;
+  object-fit: cover;
+  bottom: 0;
+  left: 0;
+}
+
+.p-step::after {
+  position: absolute;
+  content: '';
+  background: url(../images/common/step_right.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: rem(171);
+  height: auto;
+  aspect-ratio: 171 / 245;
+  object-fit: cover;
+  top: 0;
+  right: 0;
 }
 
 .p-step__title {
@@ -21,6 +52,7 @@
     font-size: rem(36);
   }
 }
+
 .p-step__title span {
   color: #54C3F1;
 }
@@ -43,6 +75,7 @@
   }
 
   @include mq("md") {
+
     &::before,
     &::after {
       content: "";
@@ -164,9 +197,35 @@
   }
 }
 
+.p-step__callout-lead span {
+  color: #F6AB00;
+  position: relative;
+}
+
+.p-step__callout-lead span::after {
+  position: absolute;
+  content: '';
+  background: url(../images/common/step_icon.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: rem(22);
+  height: auto;
+  aspect-ratio: 22 / 24;
+  object-fit: cover;
+  top: rem(-10);
+  right: rem(-24);
+}
+.p-step__callout-price-wrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: rem(34);
+  margin-left: rem(96);
+  margin-top: rem(16);
+}
+
 .p-step__callout-price {
-  margin-left: auto;
-  margin-right: auto;
   width: 100%;
   max-width: rem(320);
 
@@ -191,4 +250,3 @@
     justify-self: end;
   }
 }
-

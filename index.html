@@ -5,26 +5,35 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <meta name="format-detection" content="telephone=no" />
   <!-- meta情報 -->
-  <title>tk</title>
-  <meta name="description" content="" />
-  <meta name="keywords" content="" />
+  <title>かんたんはこスキャン｜箱ごと書類を電子化（スキャン）</title>
+  <meta name="description" content="箱ごと送るだけで書類をまとめて電子化。フルカラー・300dpi・OCR付与でPDF化し、DVD納品・原本返却まで対応する「かんたんはこスキャン」のサービス紹介LPです。" />
+  <meta name="keywords" content="書類電子化,スキャン代行,ペーパーレス,OCR,PDF化,DVD納品,原本返却,かんたんはこスキャン" />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#005D97" />
   <!-- ogp -->
-  <meta property="og:title" content="" />
-  <meta property="og:type" content="" />
-  <meta property="og:url" content="" />
-  <meta property="og:image" content="" />
-  <meta property="og:site_name" content="" />
-  <meta property="og:description" content="" />
+  <meta property="og:locale" content="ja_JP" />
+  <meta property="og:site_name" content="かんたんはこスキャン" />
+  <meta property="og:title" content="かんたんはこスキャン｜箱ごと書類を電子化（スキャン）" />
+  <meta property="og:description" content="箱ごと送るだけで書類をまとめて電子化。フルカラー・300dpi・OCR付与でPDF化し、DVD納品・原本返却まで対応します。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://your-domain.example/" />
+  <meta property="og:image" content="./images/common/mv_img.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="475" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="かんたんはこスキャン｜箱ごと書類を電子化（スキャン）" />
+  <meta name="twitter:description" content="箱ごと送るだけで書類をまとめて電子化。フルカラー・300dpi・OCR付与でPDF化し、DVD納品・原本返却まで対応します。" />
+  <meta name="twitter:image" content="./images/common/mv_img.webp" />
   <!-- ファビコン -->
-  <link rel="icon" href="./images/common/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="./images/common/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="./images/common/submit_icon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/common/submit_icon.png">
   <!-- CSS (sassコマンドで自動生成) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/styles.css">
   <!-- JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script defer src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script defer src="./js/script.js"></script>
   <!-- Vite Entry Point -->
   <script type="module" src="/src/main.js"></script>
@@ -158,11 +167,13 @@
           </ol>
 
           <div class="p-step__callout">
-            <p class="p-step__callout-lead">バインダのまま！クリップやホッチキスもそのままでOK</p>
-            <figure class="p-step__callout-price">
-              <img decoding="async" loading="lazy" src="./images/common/step-price.svg" alt="66,000円/箱(税込)" width="416" height="62">
-            </figure>
-            <p class="p-step__callout-note">※送料込</p>
+            <p class="p-step__callout-lead">バインダのまま！クリップやホッチキスも<span>そのままでOK</span></p>
+            <div class="p-step__callout-price-wrapper">
+              <figure class="p-step__callout-price">
+                <img decoding="async" loading="lazy" src="./images/common/step-price.svg" alt="66,000円/箱(税込)" width="416" height="62">
+              </figure>
+              <p class="p-step__callout-note">※送料込</p>
+            </div>
           </div>
         </div>
       </div>
@@ -246,7 +257,7 @@
         <div class="p-example__content">
           <div class="p-example__box">
             <h2 class="p-example__title">
-              箱（W40㎝ × D33㎝ × H30㎝）に<br>
+              <span>箱（W40㎝ × D33㎝ × H30㎝）に</span><br>
               詰めたイメージ
             </h2>
 
@@ -260,10 +271,6 @@
                   <source srcset="./images/common/example-left.webp" type="image/webp" width="537" height="415">
                   <img decoding="async" loading="lazy" src="./images/common/example-left.png" alt="" width="537" height="415">
                 </picture>
-              </figure>
-
-              <figure class="p-example__arrow">
-                <img decoding="async" loading="lazy" src="./images/common/example-arrow.svg" alt="" width="97" height="31">
               </figure>
 
               <figure class="p-example__photo">
@@ -282,32 +289,21 @@
             </div>
           </div>
           <div class="p-example__flow">
-            <h3 class="p-example__flow-title">箱詰めの手順</h3>
+            <h3 class="p-example__flow-title">箱詰めの<span>手順</span></h3> 
 
             <div class="p-example__flow-items">
               <div class="p-example__flow-item">
                 <p class="p-example__flow-tag">step1</p>
                 <div class="p-example__flow-video">
-                  <iframe
-                    src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ"
-                    title="箱詰め手順 step1（仮）"
-                    loading="lazy"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                  ></iframe>
+                  <video src="./images/common/movie_1.mp4" controls width="520" height="350"></video>
                 </div>
               </div>
 
               <div class="p-example__flow-item">
                 <p class="p-example__flow-tag">step2</p>
                 <div class="p-example__flow-video">
-                  <iframe
-                    src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ"
-                    title="箱詰め手順 step2（仮）"
-                    loading="lazy"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                  ></iframe>
+                  <video src="./images/common/movie_2.mp4" controls width="520" height="350"></video>
+                  
                 </div>
               </div>
             </div>
@@ -484,139 +480,186 @@
     <section class="p-contact">
       <div class="l-inner">
         <div class="p-contact__content">
-          <form
-            class="p-contact__form"
-            action="https://formsubmit.co/firststep.yumauda@gmail.com"
-            method="POST"
-          >
-            <input type="hidden" name="_subject" value="【かんたんはこスキャン】お申し込みフォーム">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="text" id="contact-honey" name="_honey" class="p-contact__honey" tabindex="-1" autocomplete="off" aria-label="この項目は入力しないでください">
+          <div class="p-contact__title-wrapper">
+            <h2 class="p-contact__title">お申し込み・お問い合わせ</h2>
+          </div>
+          <div class="p-contact__box" id="contact">
+            <div class="p-contact__tabs" role="tablist" aria-label="フォーム切り替え">
+              <button class="p-contact__tab is-active js-contact-tab" type="button" role="tab" aria-selected="true" aria-controls="contact-panel-apply" id="contact-tab-apply">お申し込み</button>
+              <button class="p-contact__tab js-contact-tab" type="button" role="tab" aria-selected="false" aria-controls="contact-panel-inquiry" id="contact-tab-inquiry" tabindex="-1">お問い合わせ</button>
+            </div>
 
-            <div class="p-contact__fields">
-              <div class="p-contact__field">
-                <label class="p-contact__label" for="contact-company">会社名</label>
-                <input class="p-contact__input" id="contact-company" name="会社名" type="text" placeholder="例）株式会社ヤマタネ" autocomplete="organization">
-              </div>
+            <p class="p-contact__note">全て必須入力になります。</p>
 
-              <div class="p-contact__field">
-                <div class="p-contact__label-row">
-                  <label class="p-contact__label" for="contact-address">住所</label>
-                  <span class="p-contact__required" aria-hidden="true">必須</span>
-                </div>
+            <div class="p-contact__panels">
+              <div class="p-contact__panel js-contact-panel" id="contact-panel-apply" role="tabpanel" aria-labelledby="contact-tab-apply">
+                <form class="p-contact__form" action="https://formsubmit.co/firststep.yumauda@gmail.com" method="POST">
+                  <input type="hidden" name="_subject" value="【かんたんはこスキャン】お申し込みフォーム">
+                  <input type="hidden" name="_captcha" value="false">
+                  <input type="text" id="contact-honey-apply" name="_honey" class="p-contact__honey" tabindex="-1" autocomplete="off" aria-label="この項目は入力しないでください">
 
-                <div class="p-contact__address">
-                  <div class="p-contact__zip">
-                    <span class="p-contact__zip-mark">〒</span>
-                    <input
-                      class="p-contact__input p-contact__input--zip"
-                      id="contact-zip"
-                      name="郵便番号"
-                      type="text"
-                      inputmode="numeric"
-                      autocomplete="postal-code"
-                      placeholder="501-0000"
-                    >
+                  <div class="p-contact__fields">
+                    <div class="p-contact__field">
+                      <label class="p-contact__label" for="apply-company">会社名</label>
+                      <input class="p-contact__input" id="apply-company" name="会社名" type="text" placeholder="例）株式会社ヤマタネ" autocomplete="organization" required>
+                    </div>
+
+                    <div class="p-contact__field">
+                      <div class="p-contact__label-row">
+                        <label class="p-contact__label" for="apply-address">住所</label>
+                        <span class="p-contact__required" aria-hidden="true">必須</span>
+                      </div>
+
+                      <div class="p-contact__address">
+                        <div class="p-contact__zip">
+                          <span class="p-contact__zip-mark">〒</span>
+                          <input class="p-contact__input p-contact__input--zip" id="apply-zip" name="郵便番号" type="text" inputmode="numeric" autocomplete="postal-code" placeholder="501-0000" required>
+                        </div>
+                        <input class="p-contact__input" id="apply-address" name="住所" type="text" placeholder="例）東京都港区○丁目○-○" autocomplete="street-address" required>
+                      </div>
+                    </div>
+
+                    <div class="p-contact__field">
+                      <label class="p-contact__label" for="apply-tel">電話番号</label>
+                      <input class="p-contact__input" id="apply-tel" name="電話番号" type="tel" placeholder="例）1234-123-1234" autocomplete="tel" required>
+                    </div>
+
+                    <div class="p-contact__field">
+                      <label class="p-contact__label" for="apply-name">ご担当者名</label>
+                      <input class="p-contact__input" id="apply-name" name="ご担当者名" type="text" placeholder="例）山種　花子" autocomplete="name" required>
+                    </div>
+
+                    <div class="p-contact__field">
+                      <label class="p-contact__label" for="apply-email">メールアドレス</label>
+                      <input class="p-contact__input" id="apply-email" name="email" type="email" placeholder="例）XXXXXX@XXXX" autocomplete="email" required>
+                    </div>
+
+                    <div class="p-contact__field p-contact__field--short">
+                      <label class="p-contact__label" for="apply-boxes">箱数</label>
+                      <input class="p-contact__input p-contact__input--short" id="apply-boxes" name="箱数" type="text" placeholder="例）11箱" required>
+                    </div>
+
+                    <div class="p-contact__field p-contact__field--short">
+                      <label class="p-contact__label" for="apply-books">冊数</label>
+                      <input class="p-contact__input p-contact__input--short" id="apply-books" name="冊数" type="text" placeholder="例）1冊" required>
+                    </div>
+
+                    <div class="p-contact__field p-contact__field--short">
+                      <label class="p-contact__label" for="apply-total">合計金額</label>
+                      <input class="p-contact__input p-contact__input--short" id="apply-total" name="合計金額" type="text" placeholder="例）00,000円" required>
+                    </div>
                   </div>
-                  <input
-                    class="p-contact__input"
-                    id="contact-address"
-                    name="住所"
-                    type="text"
-                    placeholder="例）東京都港区○丁目○-○"
-                    autocomplete="street-address"
-                    required
-                  >
-                </div>
+
+                  <div class="p-contact__agreements">
+                    <div class="p-contact__agree">
+                      <label class="p-contact__check">
+                        <input class="p-contact__checkbox" type="checkbox" name="同意（仕様）" value="同意" required>
+                        <span class="p-contact__check-box" aria-hidden="true"></span>
+                        <span class="p-contact__check-label">かんたんはこスキャン仕様に同意します</span>
+                      </label>
+                      <p class="p-contact__agree-text">
+                        仕様外文書は電子化せずに原本を返却されることに同意します<br>
+                        対応書類以外の混入および冊子（背表紙接着）はありません<br>
+                        A5～A3以外サイズはありません<br>
+                        著作物・名刺・束の写真はありません<br>
+                        専用ボックスが1月以内に返送なければキャンセル料5,500円発生
+                      </p>
+                    </div>
+
+                    <div class="p-contact__agree">
+                      <label class="p-contact__check">
+                        <input class="p-contact__checkbox" type="checkbox" name="同意（個人情報）" value="同意" required>
+                        <span class="p-contact__check-box" aria-hidden="true"></span>
+                        <span class="p-contact__check-label">個人情報の取扱に同意します。</span>
+                      </label>
+                      <div class="p-contact__policy" role="region" aria-label="個人情報の取扱">
+                        <p class="p-contact__policy-text">
+                          （個人情報の管理）
+
+                          1．弊社は、申込者の個人情報（個人情報の保護に関する法律に定義されるもの）を、
+                          　 弊社のプライバシーポリシーに基づき適切に取り扱うものとし、申込者はこれに同意したものとみなします。
+
+                          2．弊社は、申込者から取得した個人情報（会社名、氏名、電話番号、メールアドレス等、申込時に記載された項目）を保有します。
+
+                          3．弊社は、取得した個人情報を、契約の検討・履行および弊社の営業活動（郵送物、電話、電子メールによる案内・連絡等）の目的で利用します。
+
+                          4．弊社は、以下のとおり個人情報を共同利用する場合があります。
+                          （1）共同利用する個人情報の項目：前項に記載の個人情報
+                          （2）共同利用の目的：前項に記載の利用目的
+                          （3）共同利用する者の範囲：ヤマタネグループ各社および利用目的達成に必要な範囲の相手先
+                          （4）当該個人データの管理責任者：弊社
+
+                          5．弊社は、本サービスの履行に必要な範囲において、機密保持契約を締結した第三者に対し、申込者の個人情報を提供する場合があります。
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <button class="p-contact__submit" type="submit">
+                    <span class="p-contact__submit-text">お申し込み</span>
+                    <span class="p-contact__submit-icon" aria-hidden="true">
+                      <img decoding="async" loading="lazy" src="./images/common/contact-arrow.svg" alt="" width="35" height="35">
+                    </span>
+                  </button>
+                </form>
               </div>
 
-              <div class="p-contact__field">
-                <label class="p-contact__label" for="contact-tel">電話番号</label>
-                <input class="p-contact__input" id="contact-tel" name="電話番号" type="tel" placeholder="例）1234-123-1234" autocomplete="tel">
-              </div>
+              <div class="p-contact__panel js-contact-panel" id="contact-panel-inquiry" role="tabpanel" aria-labelledby="contact-tab-inquiry" hidden>
+                <form class="p-contact__form" action="https://formsubmit.co/firststep.yumauda@gmail.com" method="POST">
+                  <input type="hidden" name="_subject" value="【かんたんはこスキャン】お問い合わせフォーム">
+                  <input type="hidden" name="_captcha" value="false">
+                  <input type="text" id="contact-honey-inquiry" name="_honey" class="p-contact__honey" tabindex="-1" autocomplete="off" aria-label="この項目は入力しないでください">
 
-              <div class="p-contact__field">
-                <label class="p-contact__label" for="contact-name">ご担当者名</label>
-                <input class="p-contact__input" id="contact-name" name="ご担当者名" type="text" placeholder="例）山種　花子" autocomplete="name">
-              </div>
+                  <div class="p-contact__fields">
+                    <div class="p-contact__field">
+                      <label class="p-contact__label" for="inq-company">会社名</label>
+                      <input class="p-contact__input" id="inq-company" name="会社名" type="text" placeholder="例）株式会社ヤマタネ" autocomplete="organization" required>
+                    </div>
 
-              <div class="p-contact__field">
-                <label class="p-contact__label" for="contact-email">メールアドレス</label>
-                <input class="p-contact__input" id="contact-email" name="email" type="email" placeholder="例）XXXXXX@XXXX" autocomplete="email" required>
-              </div>
+                    <div class="p-contact__field">
+                      <label class="p-contact__label" for="inq-name">ご担当者名</label>
+                      <input class="p-contact__input" id="inq-name" name="ご担当者名" type="text" placeholder="例）山種　花子" autocomplete="name" required>
+                    </div>
 
-              <div class="p-contact__field p-contact__field--short">
-                <label class="p-contact__label" for="contact-boxes">箱数</label>
-                <input class="p-contact__input p-contact__input--short" id="contact-boxes" name="箱数" type="text" placeholder="例）11箱">
-              </div>
+                    <div class="p-contact__field">
+                      <label class="p-contact__label" for="inq-email">メールアドレス</label>
+                      <input class="p-contact__input" id="inq-email" name="email" type="email" placeholder="例）XXXXXX@XXXX" autocomplete="email" required>
+                    </div>
 
-              <div class="p-contact__field p-contact__field--short">
-                <label class="p-contact__label" for="contact-books">冊数</label>
-                <input class="p-contact__input p-contact__input--short" id="contact-books" name="冊数" type="text" placeholder="例）1冊">
-              </div>
+                    <div class="p-contact__field">
+                      <label class="p-contact__label" for="inq-tel">電話番号</label>
+                      <input class="p-contact__input" id="inq-tel" name="電話番号" type="tel" placeholder="例）1234-123-1234" autocomplete="tel" required>
+                    </div>
 
-              <div class="p-contact__field p-contact__field--short">
-                <label class="p-contact__label" for="contact-total">合計金額</label>
-                <input class="p-contact__input p-contact__input--short" id="contact-total" name="合計金額" type="text" placeholder="例）00,000円">
+                    <div class="p-contact__field">
+                      <label class="p-contact__label" for="inq-message">お問い合わせ内容</label>
+                      <textarea class="p-contact__textarea" id="inq-message" name="お問い合わせ内容" rows="6" placeholder="お問い合わせ内容をご入力ください" required></textarea>
+                    </div>
+                  </div>
+
+                  <button class="p-contact__submit" type="submit">
+                    <span class="p-contact__submit-text">お問い合わせ</span>
+                    <span class="p-contact__submit-icon" aria-hidden="true">
+                      <img decoding="async" loading="lazy" src="./images/common/contact-arrow.svg" alt="" width="35" height="35">
+                    </span>
+                  </button>
+                </form>
               </div>
             </div>
-
-            <div class="p-contact__agreements">
-              <div class="p-contact__agree">
-                <label class="p-contact__check">
-                  <input class="p-contact__checkbox" type="checkbox" name="同意（仕様）" value="同意" required>
-                  <span class="p-contact__check-box" aria-hidden="true"></span>
-                  <span class="p-contact__check-label">かんたんはこスキャン仕様に同意します</span>
-                </label>
-                <p class="p-contact__agree-text">
-                  仕様外文書は電子化せずに原本を返却されることに同意します<br>
-                  対応書類以外の混入および冊子（背表紙接着）はありません<br>
-                  A5～A3以外サイズはありません<br>
-                  著作物・名刺・束の写真はありません<br>
-                  専用ボックスが1月以内に返送なければキャンセル料5,500円発生
-                </p>
-              </div>
-
-              <div class="p-contact__agree">
-                <label class="p-contact__check">
-                  <input class="p-contact__checkbox" type="checkbox" name="同意（個人情報）" value="同意" required>
-                  <span class="p-contact__check-box" aria-hidden="true"></span>
-                  <span class="p-contact__check-label">個人情報の取扱に同意します。</span>
-                </label>
-                <div class="p-contact__policy" role="region" aria-label="個人情報の取扱">
-                  <p class="p-contact__policy-text">
-                    （個人情報の管理）
-
-                    1．弊社は、申込者の個人情報（個人情報の保護に関する法律に定義されるもの）を、
-                    　 弊社のプライバシーポリシーに基づき適切に取り扱うものとし、申込者はこれに同意したものとみなします。
-
-                    2．弊社は、申込者から取得した個人情報（会社名、氏名、電話番号、メールアドレス等、申込時に記載された項目）を保有します。
-
-                    3．弊社は、取得した個人情報を、契約の検討・履行および弊社の営業活動（郵送物、電話、電子メールによる案内・連絡等）の目的で利用します。
-
-                    4．弊社は、以下のとおり個人情報を共同利用する場合があります。
-                    （1）共同利用する個人情報の項目：前項に記載の個人情報
-                    （2）共同利用の目的：前項に記載の利用目的
-                    （3）共同利用する者の範囲：ヤマタネグループ各社および利用目的達成に必要な範囲の相手先
-                    （4）当該個人データの管理責任者：弊社
-
-                    5．弊社は、本サービスの履行に必要な範囲において、機密保持契約を締結した第三者に対し、申込者の個人情報を提供する場合があります。
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <button class="p-contact__submit" type="submit">
-              <span class="p-contact__submit-text">お申し込み</span>
-              <span class="p-contact__submit-icon" aria-hidden="true">
-                <img decoding="async" loading="lazy" src="./images/common/contact-arrow.svg" alt="" width="35" height="35">
-              </span>
-            </button>
-          </form>
+          </div>
         </div>
       </div>
     </section>
     
   </main>
+  <footer class="p-footer">
+    <div class="l-inner">
+      <div class="p-footer__content">
+        <a class="p-footer__logo" href="#">
+          <img decoding="async" loading="lazy" src="./images/common/header-logo.svg" alt="かんたんはこスキャン" width="157" height="68">
+        </a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

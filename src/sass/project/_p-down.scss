@@ -4,11 +4,29 @@
   background-color: #005d97;
   padding-top: rem(56);
   padding-bottom: rem(56);
+  position: relative;
+  overflow-x: clip;
 
   @include mq("md") {
     padding-top: rem(32);
     padding-bottom: rem(40);
   }
+}
+
+.p-down::before {
+  position: absolute;
+  content: '';
+  background: url(../images/common/down_left.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: rem(113);
+  height: auto;
+  aspect-ratio: 113 / 200;
+  object-fit: cover;
+  top: rem(-64);
+  right: rem(-16);
+  mix-blend-mode: multiply;
 }
 
 .p-down__box {

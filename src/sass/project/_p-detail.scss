@@ -40,8 +40,6 @@
   @include mq("md") {
     grid-template-columns: repeat(5, 1fr);
     gap: 0;
-    border-top: 1px dashed #005d97;
-    border-left: 1px dashed #005d97;
   }
 }
 
@@ -59,9 +57,18 @@
     padding: rem(28) rem(10);
     border-right: 1px dashed #005d97;
     border-bottom: 1px dashed #005d97;
+
+    &:nth-child(n + 6):nth-child(-n + 10) {
+      border-bottom: initial;
+    }
   }
 }
-
+.p-detail__item:nth-child(5),
+.p-detail__item:nth-child(10) {
+  @include mq(md){
+    border-right: none;
+  }
+}
 .p-detail__icon {
   width: rem(92);
   height: auto;
@@ -98,6 +105,8 @@
   @include mq("md") {
     margin-top: rem(24);
     font-size: rem(14);
+    width: fit-content;
+    margin-left: auto;
   }
 }
 
@@ -107,6 +116,7 @@
   justify-content: center;
 
   @include mq("md") {
+    
     margin-top: rem(40);
   }
 }
