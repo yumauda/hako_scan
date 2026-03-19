@@ -1,0 +1,243 @@
+@use "../global" as *;
+
+.p-contact {
+  padding-top: rem(64);
+  padding-bottom: rem(96);
+
+  @include mq("md") {
+    padding-top: rem(96);
+    padding-bottom: rem(120);
+  }
+}
+
+.p-contact__content {
+  max-width: rem(800);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.p-contact__honey {
+  position: absolute;
+  left: -100vw;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.p-contact__form {
+  display: grid;
+  gap: rem(56);
+}
+
+.p-contact__fields {
+  display: grid;
+  gap: rem(30);
+}
+
+.p-contact__field {
+  display: grid;
+  grid-template-columns: rem(184) 1fr;
+  align-items: center;
+  gap: rem(30);
+}
+
+.p-contact__field--short .p-contact__input--short {
+  max-width: rem(180);
+}
+
+.p-contact__label {
+  color: #393e4c;
+  font-weight: 500;
+  font-size: rem(16);
+  line-height: 1.7;
+}
+
+.p-contact__label-row {
+  display: flex;
+  align-items: center;
+  gap: rem(10);
+}
+
+.p-contact__required {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: rem(36);
+  height: rem(17);
+  background-color: #f6ab00;
+  color: $white;
+  font-size: rem(10);
+  font-weight: 700;
+  line-height: 1.7;
+  border-radius: rem(2);
+}
+
+.p-contact__input {
+  width: 100%;
+  height: rem(40);
+  padding: 0 rem(12);
+  border: 1px solid #bdbdbd;
+  border-radius: rem(2);
+  background-color: #fff;
+  font-size: rem(16);
+}
+
+.p-contact__input::placeholder {
+  color: #cccccc;
+}
+
+.p-contact__address {
+  display: grid;
+  gap: rem(8);
+}
+
+.p-contact__zip {
+  display: grid;
+  grid-template-columns: rem(24) 1fr;
+  align-items: center;
+  gap: rem(8);
+  max-width: rem(180);
+}
+
+.p-contact__zip-mark {
+  font-size: rem(16);
+  line-height: 1.485;
+}
+
+.p-contact__agreements {
+  display: grid;
+  gap: rem(16);
+}
+
+.p-contact__agree {
+  display: grid;
+  gap: rem(16);
+  justify-items: start;
+}
+
+.p-contact__check {
+  display: inline-flex;
+  align-items: center;
+  gap: rem(12);
+}
+
+.p-contact__checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.p-contact__check-box {
+  width: rem(25);
+  height: rem(25);
+  border: rem(2) solid #bdbdbd;
+  border-radius: rem(2);
+  background-color: $white;
+  display: grid;
+  place-items: center;
+}
+
+.p-contact__checkbox:checked + .p-contact__check-box::after {
+  content: "";
+  width: rem(14);
+  height: rem(8);
+  border-left: rem(3) solid #005d97;
+  border-bottom: rem(3) solid #005d97;
+  transform: rotate(-45deg);
+  margin-top: rem(-2);
+}
+
+.p-contact__check-label {
+  font-weight: $bold;
+  font-size: rem(18);
+  line-height: 1.5;
+
+  @include mq("md") {
+    font-size: rem(20);
+  }
+}
+
+.p-contact__agree-text {
+  font-weight: 500;
+  font-size: rem(15);
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+}
+
+.p-contact__policy {
+  width: 100%;
+  border: 1px solid #bdbdbd;
+  border-radius: rem(2);
+  background-color: $white;
+  height: rem(100);
+  overflow: auto;
+  padding: rem(24) rem(30);
+}
+
+.p-contact__policy-text {
+  font-weight: 500;
+  font-size: rem(15);
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  white-space: pre-line;
+}
+
+.p-contact__submit {
+  width: 100%;
+  max-width: rem(400);
+  height: rem(70);
+  margin-left: auto;
+  margin-right: auto;
+  border: 0;
+  background-color: #f6ab00;
+  border-radius: rem(4);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: rem(14);
+  color: $white;
+  cursor: pointer;
+}
+
+.p-contact__submit-text {
+  font-weight: $bold;
+  font-size: rem(22);
+  line-height: 1.16;
+}
+
+.p-contact__submit-icon {
+  width: rem(35);
+  height: rem(35);
+  display: inline-flex;
+}
+
+.p-contact__submit-icon img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+@include mq("md") {
+  .p-contact__field {
+    grid-template-columns: rem(184) 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .p-contact__field {
+    grid-template-columns: 1fr;
+    gap: rem(10);
+    align-items: start;
+  }
+
+  .p-contact__zip {
+    max-width: 100%;
+  }
+
+  .p-contact__field--short .p-contact__input--short {
+    max-width: 100%;
+  }
+}
+

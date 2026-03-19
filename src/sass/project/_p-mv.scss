@@ -1,8 +1,42 @@
 @use "../global" as *;
 
 .p-mv {
-  padding-top: rem(98);
+  padding-top: rem(141);
   padding-bottom: rem(102);
+  position: relative;
+  background: #F5FBFE;
+}
+
+.p-mv::before {
+  position: absolute;
+  content: '';
+  background: url(../images/common/mv_left.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: rem(431);
+  height: auto;
+  aspect-ratio: 431 / 274;
+  object-fit: cover;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.p-mv::after {
+  position: absolute;
+  content: '';
+  background: url(../images/common/mv_right.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: rem(755);
+  height: auto;
+  aspect-ratio: 755 / 329;
+  object-fit: cover;
+  top: 0;
+  right: 0;
+  z-index: 0;
 }
 
 .p-mv__img {
@@ -11,6 +45,7 @@
   margin-left: auto;
   margin-right: auto;
 }
+
 .p-mv__img img {
   width: 100%;
   height: auto;
