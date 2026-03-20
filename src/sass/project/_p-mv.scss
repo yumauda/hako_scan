@@ -1,10 +1,15 @@
 @use "../global" as *;
 
 .p-mv {
-  padding-top: rem(141);
-  padding-bottom: rem(102);
   position: relative;
   background: #F5FBFE;
+  padding-top: rem(112);
+  padding-bottom: rem(101);
+  @include mq(md){
+    
+    padding-top: rem(141);
+    padding-bottom: rem(102);
+  }
 }
 
 .p-mv::before {
@@ -44,6 +49,8 @@
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
+  z-index: 2;
 }
 
 .p-mv__img img {

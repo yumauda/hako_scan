@@ -2,8 +2,8 @@
 
 .p-down {
   background-color: #005d97;
-  padding-top: rem(56);
-  padding-bottom: rem(56);
+  padding-top: rem(48);
+  padding-bottom: rem(48);
   position: relative;
   overflow-x: clip;
 
@@ -61,7 +61,7 @@
 }
 
 .p-down__text-wrapper {
-  margin-top: rem(16);
+  margin-top: rem(24);
 
   @include mq(md) {
     margin-top: rem(40);
@@ -74,15 +74,14 @@
 .p-down__text {
   color: $white;
   font-weight: 500;
-  font-size: rem(15);
+  font-size: rem(16);
   line-height: 1.6;
   letter-spacing: 0.05em;
-
+  padding-left: 1em;
+  text-indent: -1em;
 
   @include mq("md") {
 
     font-size: rem(17);
-    padding-left: 1em;
-    text-indent: -1em;
   }
 }

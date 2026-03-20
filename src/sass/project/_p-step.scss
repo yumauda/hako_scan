@@ -1,8 +1,8 @@
 @use "../global" as *;
 
 .p-step {
-  padding-top: rem(64);
-  padding-bottom: rem(64);
+  padding-top: rem(72);
+  padding-bottom: rem(112);
   position: relative;
 
   @include mq("md") {
@@ -61,7 +61,6 @@
   margin-top: rem(32);
   display: flex;
   flex-direction: column;
-  gap: rem(28);
 
   @include mq("md") {
     margin-top: rem(40);
@@ -99,10 +98,21 @@
 
 .p-step__item {
   width: 100%;
+  padding-top: rem(40);
+  padding-bottom: rem(40);
 
   @include mq("md") {
+    padding-top: initial;
+    padding-bottom: initial;
     width: rem(277);
   }
+}
+
+.p-step__item:first-child {
+  padding-top: initial;
+}
+.p-step__item:last-child {
+  padding-bottom: initial;
 }
 
 .p-step__item:nth-child(2) {
@@ -114,7 +124,12 @@
 .p-step__item-inner {
   display: grid;
   place-items: center;
-  gap: rem(24);
+  gap: rem(16);
+
+  @include mq(md) {
+
+    gap: rem(24);
+  }
 }
 
 .p-step__item-head {
@@ -169,13 +184,15 @@
 }
 
 .p-step__callout {
-  margin-top: rem(40);
+  margin-top: rem(56);
   border: rem(5) solid #fff100;
   border-radius: rem(60);
-  padding: rem(28) rem(20);
+  padding: rem(48) rem(26);
   text-align: center;
   display: grid;
   gap: rem(10);
+  position: relative;
+  z-index: 2;
 
   @include mq("md") {
     margin-top: rem(64);
@@ -216,13 +233,17 @@
   top: rem(-10);
   right: rem(-24);
 }
+
 .p-step__callout-price-wrapper {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  gap: rem(34);
-  margin-left: rem(96);
   margin-top: rem(16);
+  @include mq(md){
+    gap: rem(34);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-left: rem(96);
+    
+  }
 }
 
 .p-step__callout-price {
@@ -244,8 +265,12 @@
   font-size: rem(14);
   line-height: 1.5;
   letter-spacing: 0.05em;
+  margin-top: rem(4);
+  text-align: right;
 
   @include mq("md") {
+    text-align: initial;
+    margin-top: initial;
     font-size: rem(17);
     justify-self: end;
   }

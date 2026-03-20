@@ -1,8 +1,8 @@
 @use "../global" as *;
 
 .p-example {
-  padding-top: rem(64);
-  padding-bottom: rem(64);
+  padding-top: rem(72);
+  padding-bottom: rem(72);
   background: #F5FBFE;
   position: relative;
   overflow-x: clip;
@@ -36,11 +36,13 @@
 
 .p-example__box {
   background-color: $white;
-  border-radius: rem(60);
   padding: rem(40) rem(20);
+  padding-bottom: rem(64);
   position: relative;
-
+  border-radius: rem(50);
+  
   @include mq("md") {
+    border-radius: rem(60);
     padding: rem(80) rem(48) rem(72);
 
   }
@@ -48,7 +50,7 @@
 
 .p-example__title {
   text-align: center;
-  font-size: rem(24);
+  font-size: rem(28);
   font-weight: 800;
   letter-spacing: 0.1em;
   line-height: 1.5;
@@ -61,6 +63,7 @@
 
 .p-example__title span {
   color: $black;
+  font-size: rem(16);
 
   @include mq("md") {
     font-size: rem(26);
@@ -87,9 +90,9 @@
 }
 
 .p-example__media {
-  margin-top: rem(28);
+  margin-top: rem(32);
   display: grid;
-  gap: rem(16);
+  gap: rem(24);
   align-items: center;
 
   @include mq("md") {
@@ -148,7 +151,7 @@
 }
 
 .p-example__caption {
-  margin-top: rem(24);
+  margin-top: rem(40);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -186,6 +189,7 @@
 }
 
 .p-example__flow {
+  margin-top: rem(72);
   @include mq(md) {
     margin-top: rem(136);
 
@@ -230,17 +234,25 @@
   color: $white;
   font-family: $second-font-family;
   font-weight: $bold;
-  font-size: rem(20);
   line-height: 1.5;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  font-size: rem(16);
+  @include mq(md){
+    font-size: rem(20);
+    
+  }
 }
 
 .p-example__flow-video {
-  margin-top: rem(12);
   overflow: hidden;
   background-color: #d9d9d9;
   aspect-ratio: 520 / 350;
+  margin-top: rem(8);
+  @include mq(md){
+    margin-top: rem(12);
+    
+  }
 }
 
 .p-example__flow-video video {

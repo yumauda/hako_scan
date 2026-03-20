@@ -2,8 +2,8 @@
 
 .p-worries {
   background-color: #54c3f1;
-  padding-top: rem(64);
-  padding-bottom: rem(64);
+  padding-top: rem(72);
+  padding-bottom: rem(56);
 
   @include mq("md") {
     padding-top: rem(96);
@@ -28,10 +28,10 @@
 }
 
 .p-worries__items {
-  margin-top: rem(32);
+  margin-top: rem(24);
   display: flex;
   flex-direction: column;
-  gap: rem(20);
+  gap: rem(16);
 
   @include mq("md") {
     margin-top: rem(45);
@@ -53,24 +53,29 @@
   background-color: $white;
   border-radius: rem(15);
   box-shadow: 1px 2px 7px rgba(0, 93, 151, 0.17);
-  padding: rem(32) rem(24);
+  padding: rem(48) rem(44);
   display: grid;
   place-items: center;
-  gap: rem(24);
   min-height: rem(320);
-
+  gap: rem(16);
+  
   @include mq("md") {
+    gap: rem(24);
     padding: rem(56) rem(44);
     min-height: rem(377);
   }
 }
 
 .p-worries__card-title {
-  font-size: rem(22);
   font-weight: $bold;
   letter-spacing: 0.05em;
   line-height: 1.5;
   text-align: left;
+  font-size: rem(20);
+  @include mq(md){
+    font-size: rem(22);
+    
+  }
 }
 .p-worries__card-title span {
   color: #005D97;
@@ -82,7 +87,11 @@
 
 .p-worries__card-img {
   width: 100%;
-  max-width: rem(256);
+  max-width: rem(224);
+  @include mq(md){
+    max-width: rem(256);
+    
+  }
 }
 
 .p-worries__card-img img {
