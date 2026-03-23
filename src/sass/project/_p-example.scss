@@ -12,6 +12,7 @@
     padding-bottom: rem(120);
   }
 }
+
 .p-example::before {
   position: absolute;
   content: '';
@@ -19,13 +20,18 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  width: rem(202);
+  width: rem(137);
   height: auto;
   aspect-ratio: 202 / 350;
   object-fit: cover;
-  top: rem(-24);
+  top: rem(-16);
   left: rem(-16);
   mix-blend-mode: multiply;
+  @include mq(md){
+    top: rem(-24);
+    width: rem(202);
+    
+  }
 }
 
 .p-example__content {
@@ -40,7 +46,7 @@
   padding-bottom: rem(64);
   position: relative;
   border-radius: rem(50);
-  
+
   @include mq("md") {
     border-radius: rem(60);
     padding: rem(80) rem(48) rem(72);
@@ -177,9 +183,30 @@
   line-height: 1.5;
   letter-spacing: 0.05em;
   text-align: center;
+  position: relative;
 
   @include mq("md") {
     font-size: rem(24);
+  }
+}
+
+.p-example__caption-text::before {
+  position: absolute;
+  content: '';
+  background: url(../images/common/example-mark.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: rem(18);
+  height: auto;
+  aspect-ratio: 22 / 24;
+  object-fit: cover;
+  top: rem(-12);
+  right: rem(-8);
+  @include mq(md){
+    right: rem(-20);
+    width: rem(22);
+    
   }
 }
 
@@ -188,12 +215,33 @@
   padding: 0 rem(2);
 }
 
+.p-example__orange {
+  color: #F6AB00;
+}
+
 .p-example__flow {
   margin-top: rem(72);
+  position: relative;
+
   @include mq(md) {
     margin-top: rem(136);
 
   }
+}
+
+.p-example__flow::before {
+  position: absolute;
+  content: '';
+  background: url(../images/common/example-flow-icon.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: rem(181);
+  height: auto;
+  aspect-ratio: 181 / 260;
+  object-fit: cover;
+  top: rem(-160);
+  right: rem(-200);
 }
 
 .p-example__flow-title {
@@ -238,9 +286,10 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   font-size: rem(16);
-  @include mq(md){
+
+  @include mq(md) {
     font-size: rem(20);
-    
+
   }
 }
 
@@ -249,9 +298,10 @@
   background-color: #d9d9d9;
   aspect-ratio: 520 / 350;
   margin-top: rem(8);
-  @include mq(md){
+
+  @include mq(md) {
     margin-top: rem(12);
-    
+
   }
 }
 

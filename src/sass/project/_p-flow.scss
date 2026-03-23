@@ -4,10 +4,33 @@
   padding-top: rem(64);
   padding-bottom: rem(64);
   background: #F5FBFE;
+  position: relative;
+  overflow-x: clip;
 
   @include mq("md") {
     padding-top: rem(96);
     padding-bottom: rem(96);
+  }
+}
+
+.p-flow::before {
+  position: absolute;
+  content: '';
+  background: url(../images/common/flow_top_icon.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: rem(80);
+  height: auto;
+  aspect-ratio: 156 / 178;
+  object-fit: cover;
+  top: rem(-12);
+  right: rem(-4);
+  @include mq(md){
+    width: rem(156);
+    top: rem(-12);
+    right: rem(-16);
+    
   }
 }
 
@@ -28,9 +51,11 @@
     font-size: rem(36);
   }
 }
+
 .p-flow__title span {
   color: #54c3f1;
 }
+
 .p-flow__items {
   margin-top: rem(32);
 
@@ -52,52 +77,85 @@
 .p-flow__card {
   display: grid;
   grid-template-columns: rem(78) 1fr;
+  grid-template-areas:
+    "step heading"
+    "text text";
   gap: rem(16);
   align-items: start;
 
   @include mq(md) {
     gap: rem(48);
+    grid-template-areas: "step body";
   }
 }
 
 .p-flow__step {
-  width: rem(78);
-  height: rem(78);
   border-radius: 9999px;
   background-color: #54c3f1;
   color: $white;
   display: grid;
   place-items: center;
   align-content: center;
+  grid-area: step;
+  width: rem(62);
+  height: rem(62);
+  @include mq(md){
+    width: rem(78);
+    height: rem(78);
+    
+  }
+}
+
+.p-flow__body {
+  display: contents;
+
+  @include mq(md) {
+    display: block;
+    grid-area: body;
+  }
 }
 
 .p-flow__step-label {
   font-family: $second-font-family;
   font-weight: $bold;
-  font-size: rem(17);
   line-height: 1.5;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  font-size: rem(14);
+  @include mq(md){
+    font-size: rem(17);
+    
+  }
 }
 
 .p-flow__step-num {
   margin-top: rem(-4);
   font-family: $second-font-family;
   font-weight: $bold;
-  font-size: rem(28);
   line-height: 1;
   letter-spacing: 0.03em;
+  font-size: rem(24);
+  @include mq(md){
+    font-size: rem(28);
+    
+  }
 }
 
 .p-flow__heading {
+  grid-area: heading;
   color: #005d97;
   font-weight: $bold;
-  font-size: rem(24);
   letter-spacing: 0.1em;
   line-height: 1.5;
   position: relative;
+  z-index: 2;
   padding-bottom: rem(10);
   width: fit-content;
+  font-size: rem(22);
+  @include mq(md){
+    font-size: rem(24);
+    
+  }
 }
 
 .p-flow__heading::after {
@@ -108,9 +166,11 @@
   width: 100%;
   height: rem(6);
   background-color: #fff100;
+  z-index: 0;
 }
 
 .p-flow__text {
+  grid-area: text;
   margin-top: rem(10);
   font-weight: 500;
   font-size: rem(14);
@@ -120,6 +180,9 @@
   @include mq("md") {
     font-size: rem(16);
   }
+}
+.p-flow__text a {
+  text-decoration: underline;
 }
 
 .p-flow__arrow {
@@ -137,13 +200,14 @@
 
 .p-flow__attention {
   margin-top: rem(40);
-  text-align: center;
   width: 100%;
   max-width: rem(800);
   margin-left: auto;
   margin-right: auto;
-
+  
+  
   @include mq("md") {
+    text-align: center;
     margin-top: rem(40);
   }
 }

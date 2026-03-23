@@ -21,10 +21,15 @@
   background-size: cover;
   aspect-ratio: 399 / 282;
   object-fit: cover;
-  width: rem(399);
   height: auto;
   bottom: 0;
   left: 0;
+  width: rem(226);
+
+  @include mq(md) {
+
+    width: rem(399);
+  }
 }
 
 .p-submit::after {
@@ -36,10 +41,15 @@
   background-size: cover;
   aspect-ratio: 399 / 282;
   object-fit: cover;
-  width: rem(415);
   height: auto;
   top: 0;
   right: 0;
+  width: rem(226);
+
+  @include mq(md) {
+    width: rem(415);
+
+  }
 }
 
 .p-submit__content {
@@ -77,10 +87,16 @@
   background-size: cover;
   aspect-ratio: 22 / 24;
   object-fit: cover;
-  width: rem(22);
   height: auto;
-  top: rem(-8);
-  right: rem(-24);
+  width: rem(18);
+  right: rem(20);
+  top: rem(42);
+  @include mq(md){
+    top: rem(-8);
+    right: rem(-24);
+    width: rem(22);
+    
+  }
 }
 
 .p-submit__btn {
@@ -98,10 +114,12 @@
   color: $white;
   margin-top: rem(16);
   height: rem(65);
-  @include mq(md){
+  position: relative;
+
+  @include mq(md) {
     height: rem(80);
     margin-top: rem(32);
-    
+
   }
 }
 
@@ -119,6 +137,10 @@
   width: rem(34);
   height: rem(34);
   display: block;
+  position: absolute;
+  top: 50%;
+  right: rem(20);
+  transform: translateY(-50%);
 }
 
 .p-submit__btn-icon img {

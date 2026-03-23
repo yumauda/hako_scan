@@ -1,26 +1,25 @@
 
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
 
-  var topBtn = $('.pagetop');
-  topBtn.hide();
+  const $topBtn = $('.js-pagetop');
+  const $mv = $('.p-mv');
 
-  // ボタンの表示設定
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 70) {
-      // 指定px以上のスクロールでボタンを表示
-      topBtn.fadeIn();
-    } else {
-      // 画面が指定pxより上ならボタンを非表示
-      topBtn.fadeOut();
-    }
+  function updateTopBtnVisibility() {
+    if (!$topBtn.length || !$mv.length) return;
+    const mvBottom = $mv.offset().top + $mv.outerHeight();
+    const scrollTop = $(window).scrollTop();
+    const shouldShow = scrollTop > mvBottom;
+    $topBtn.toggleClass('is-visible', shouldShow);
+  }
+
+  updateTopBtnVisibility();
+  $(window).on('scroll resize', function () {
+    updateTopBtnVisibility();
   });
 
-  // ボタンをクリックしたらスクロールして上に戻る
-  topBtn.click(function () {
-    $('body,html').animate({
-      scrollTop: 0
-    }, 300, 'swing');
-    return false;
+  $topBtn.on('click', function (e) {
+    e.preventDefault();
+    $('body,html').animate({ scrollTop: 0 }, 300, 'swing');
   });
 
   //ドロワーメニュー
@@ -35,18 +34,8 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
 
 
-  // スムーススクロール (絶対パスのリンク先が現在のページであった場合でも作動)
 
-  $(document).on('click', 'a[href*="#"]', function () {
-    let time = 400;
-    let header = $('header').innerHeight();
-    let target = $(this.hash);
-    if (!target.length) return;
-    let targetY = target.offset().top - header;
-    $('html,body').animate({ scrollTop: targetY }, time, 'swing');
-    return false;
-  });
-
+ 
   // お申し込み / お問い合わせ タブ切り替え
   const $tabs = $('.js-contact-tab');
   const $panels = $('.js-contact-panel');

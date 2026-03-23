@@ -4,6 +4,7 @@
   padding-top: rem(72);
   padding-bottom: rem(112);
   position: relative;
+  overflow-x: clip;
 
   @include mq("md") {
     padding-top: rem(96);
@@ -18,12 +19,16 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  width: rem(399);
+  width: rem(245);
   height: auto;
   aspect-ratio: 399 / 282;
   object-fit: cover;
   bottom: 0;
   left: 0;
+  @include mq(md){
+    width: rem(399);
+    
+  }
 }
 
 .p-step::after {
@@ -33,12 +38,19 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  width: rem(171);
   height: auto;
   aspect-ratio: 171 / 245;
   object-fit: cover;
-  top: 0;
-  right: 0;
+  width: rem(98);
+  top: rem(-48);
+  right: rem(-16);
+
+  @include mq(md) {
+    top: 0;
+    right: 0;
+    width: rem(171);
+
+  }
 }
 
 .p-step__title {
@@ -61,8 +73,12 @@
   margin-top: rem(32);
   display: flex;
   flex-direction: column;
+  padding-left: rem(12);
+  padding-right: rem(12);
 
   @include mq("md") {
+    padding-left: initial;
+    padding-right: initial;
     margin-top: rem(40);
     max-width: rem(997);
     margin-left: auto;
@@ -100,8 +116,10 @@
   width: 100%;
   padding-top: rem(40);
   padding-bottom: rem(40);
+  border-bottom: 1px solid #005D97;
 
   @include mq("md") {
+    border-bottom: initial;
     padding-top: initial;
     padding-bottom: initial;
     width: rem(277);
@@ -111,7 +129,9 @@
 .p-step__item:first-child {
   padding-top: initial;
 }
+
 .p-step__item:last-child {
+  border-bottom: initial;
   padding-bottom: initial;
 }
 
@@ -146,6 +166,7 @@
   text-transform: uppercase;
   color: #005d97;
   position: relative;
+  z-index: 2;
   text-align: center;
   width: rem(62);
 }
@@ -158,6 +179,7 @@
   bottom: rem(3);
   height: rem(6);
   background-color: #fff100;
+  z-index: -1;
 }
 
 .p-step__img {
@@ -226,23 +248,30 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  width: rem(22);
   height: auto;
   aspect-ratio: 22 / 24;
   object-fit: cover;
-  top: rem(-10);
-  right: rem(-24);
+  top: rem(-64);
+  right: rem(-36);
+  width: rem(18);
+  @include mq(md){
+    width: rem(22);
+    top: rem(-10);
+    right: rem(-24);
+    
+  }
 }
 
 .p-step__callout-price-wrapper {
   margin-top: rem(16);
-  @include mq(md){
+
+  @include mq(md) {
     gap: rem(34);
     display: flex;
     align-items: flex-end;
     justify-content: center;
     margin-left: rem(96);
-    
+
   }
 }
 

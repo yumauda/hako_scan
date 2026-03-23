@@ -47,7 +47,7 @@
           <img decoding="async" loading="lazy" src="./images/common/header-logo.svg" alt="かんたんはこスキャン" width="157" height="68">
         </a>
 
-        <a class="p-header__btn" href="#">
+        <a class="p-header__btn" href="#contact">
           <span class="p-header__btn-text">お申し込みはこちら</span>
           <span class="p-header__btn-icon" aria-hidden="true">
             <img decoding="async" loading="lazy" src="./images/common/header-arrow.svg" alt="" width="27" height="27">
@@ -71,7 +71,7 @@
     <section class="p-worries">
       <div class="l-inner">
         <div class="p-worries__content">
-          <h2 class="p-worries__title">こんなお悩みを<br class="u-mobile"> <span>解決</span>します</h2>
+          <h2 class="p-worries__title">こんなお悩みを<br class="u-mobile"><span>解決</span>します</h2>
           <ul class="p-worries__items">
             <li class="p-worries__item">
               <div class="p-worries__card">
@@ -282,9 +282,8 @@
             </div>
 
             <div class="p-example__caption">
-              <img class="p-example__mark" decoding="async" loading="lazy" src="./images/common/example-mark.svg" alt="" width="21" height="22">
               <p class="p-example__caption-text">
-                <span class="p-example__hl">バインダ5冊</span>、<span class="p-example__hl">紙ファイル6冊</span>、<span class="p-example__hl">封筒1袋</span>を収納可能！
+                バインダ<span class="p-example__hl">5冊</span>、紙ファイル<span class="p-example__hl">6冊</span>、<br class="u-mobile">封筒<span class="p-example__hl">1袋</span>を<span class="p-example__orange">収納可能！</span>
               </p>
             </div>
           </div>
@@ -319,7 +318,7 @@
 
               <h2 class="p-submit__title">お申し込みは<br class="u-mobile">こちら</h2>
             </div>
-            <a class="p-submit__btn" href="#">
+            <a class="p-submit__btn" href="#contact">
               <span class="p-submit__btn-text">お申し込みはこちら</span>
               <span class="p-submit__btn-icon">
                 <img decoding="async" loading="lazy" src="./images/common/submit-arrow.svg" alt="" width="34" height="34">
@@ -332,7 +331,7 @@
     <section class="p-detail">
       <div class="l-inner">
         <div class="p-detail__content">
-          <h2 class="p-detail__title">電子化の仕様</h2>
+          <h2 class="p-detail__title">電子化の<span>仕様</span></h2>
 
           <div class="p-detail__box">
             <ul class="p-detail__items">
@@ -413,7 +412,7 @@
                 <div class="p-flow__body">
                   <h3 class="p-flow__heading">お申し込み</h3>
                   <p class="p-flow__text">
-                    お申し込みフォームに必要事項をご記入ください。<br>
+                    <a href="#contact">お申し込みフォーム</a>に必要事項をご記入ください。<br>
                     弊社担当者が内容を確認し、専用ダンボール（空箱）をお送りします。<br>
                     箱サイズ（W33×H30×D40㎝）
                   </p>
@@ -453,7 +452,7 @@
                   <p class="p-flow__step-num">03</p>
                 </div>
                 <div class="p-flow__body">
-                  <h3 class="p-flow__heading">電子化データと原本をご返却</h3>
+                  <h3 class="p-flow__heading">電子化データと<br class="u-mobile">原本をご返却</h3>
                   <p class="p-flow__text">
                     電子化（スキャン）したデータが保存されたDVDを、原本のダンボールに同封しご返却いたします。
                   </p>
@@ -481,7 +480,7 @@
       <div class="l-inner">
         <div class="p-contact__content">
           <div class="p-contact__title-wrapper">
-            <h2 class="p-contact__title">お申し込み・お問い合わせ</h2>
+            <h2 class="p-contact__title">お申し込み・<br class="u-mobile">お問い合わせ</h2>
           </div>
           <div class="p-contact__box" id="contact">
             <div class="p-contact__tabs" role="tablist" aria-label="フォーム切り替え">
@@ -489,10 +488,11 @@
               <button class="p-contact__tab js-contact-tab" type="button" role="tab" aria-selected="false" aria-controls="contact-panel-inquiry" id="contact-tab-inquiry" tabindex="-1">お問い合わせ</button>
             </div>
 
-            <p class="p-contact__note">全て必須入力になります。</p>
 
             <div class="p-contact__panels">
               <div class="p-contact__panel js-contact-panel" id="contact-panel-apply" role="tabpanel" aria-labelledby="contact-tab-apply">
+                <p class="p-contact__note">※全て必須入力になります。</p>
+
                 <form class="p-contact__form" action="https://formsubmit.co/firststep.yumauda@gmail.com" method="POST">
                   <input type="hidden" name="_subject" value="【かんたんはこスキャン】お申し込みフォーム">
                   <input type="text" id="contact-honey-apply" name="_honey" class="p-contact__honey" tabindex="-1" autocomplete="off" aria-label="この項目は入力しないでください">
@@ -604,6 +604,9 @@
               </div>
 
               <div class="p-contact__panel js-contact-panel" id="contact-panel-inquiry" role="tabpanel" aria-labelledby="contact-tab-inquiry" hidden>
+                <p class="p-contact__note p-contact__note--inquiry">かんたんはこスキャンの仕様にない<br class="u-mobile">電子化も個別でご対応可能です。<br>
+                  まずはお気軽にお問い合わせください。</p>
+
                 <form class="p-contact__form" action="https://formsubmit.co/firststep.yumauda@gmail.com" method="POST">
                   <input type="hidden" name="_subject" value="【かんたんはこスキャン】お問い合わせフォーム">
                   <input type="hidden" name="_captcha" value="false">
@@ -611,28 +614,108 @@
 
                   <div class="p-contact__fields">
                     <div class="p-contact__field">
-                      <label class="p-contact__label" for="inq-company">会社名</label>
+                      <div class="p-contact__label-row">
+                        <label class="p-contact__label" for="inq-company">会社名</label>
+                        <span class="p-contact__required p-contact__required--alert" aria-hidden="true">必須</span>
+                      </div>
                       <input class="p-contact__input" id="inq-company" name="会社名" type="text" placeholder="例）株式会社ヤマタネ" autocomplete="organization" required>
                     </div>
 
                     <div class="p-contact__field">
-                      <label class="p-contact__label" for="inq-name">ご担当者名</label>
-                      <input class="p-contact__input" id="inq-name" name="ご担当者名" type="text" placeholder="例）山種　花子" autocomplete="name" required>
+                      <div class="p-contact__label-row">
+                        <label class="p-contact__label" for="inq-address">住所</label>
+                        <span class="p-contact__required p-contact__required--alert" aria-hidden="true">必須</span>
+                      </div>
+
+                      <div class="p-contact__address">
+                        <div class="p-contact__zip">
+                          <span class="p-contact__zip-mark">〒</span>
+                          <input class="p-contact__input p-contact__input--zip" id="inq-zip" name="郵便番号" type="text" inputmode="numeric" autocomplete="postal-code" placeholder="501-0000" required>
+                        </div>
+                        <input class="p-contact__input" id="inq-address" name="住所" type="text" placeholder="例）東京都港区○丁目○-○" autocomplete="street-address" required>
+                      </div>
                     </div>
 
                     <div class="p-contact__field">
-                      <label class="p-contact__label" for="inq-email">メールアドレス</label>
-                      <input class="p-contact__input" id="inq-email" name="email" type="email" placeholder="例）XXXXXX@XXXX" autocomplete="email" required>
-                    </div>
-
-                    <div class="p-contact__field">
-                      <label class="p-contact__label" for="inq-tel">電話番号</label>
+                      <div class="p-contact__label-row">
+                        <label class="p-contact__label" for="inq-tel">電話番号</label>
+                        <span class="p-contact__required p-contact__required--alert" aria-hidden="true">必須</span>
+                      </div>
                       <input class="p-contact__input" id="inq-tel" name="電話番号" type="tel" placeholder="例）1234-123-1234" autocomplete="tel" required>
                     </div>
 
                     <div class="p-contact__field">
-                      <label class="p-contact__label" for="inq-message">お問い合わせ内容</label>
-                      <textarea class="p-contact__textarea" id="inq-message" name="お問い合わせ内容" rows="6" placeholder="お問い合わせ内容をご入力ください" required></textarea>
+                      <div class="p-contact__label-row">
+                        <label class="p-contact__label" for="inq-name">ご担当者名</label>
+                        <span class="p-contact__required p-contact__required--alert" aria-hidden="true">必須</span>
+                      </div>
+                      <input class="p-contact__input" id="inq-name" name="ご担当者名" type="text" placeholder="例）山種　花子" autocomplete="name" required>
+                    </div>
+
+                    <div class="p-contact__field">
+                      <div class="p-contact__label-row">
+                        <label class="p-contact__label" for="inq-email">メールアドレス</label>
+                        <span class="p-contact__required p-contact__required--alert" aria-hidden="true">必須</span>
+                      </div>
+                      <input class="p-contact__input" id="inq-email" name="email" type="email" placeholder="例）XXXXXX@XXXX" autocomplete="email" required>
+                    </div>
+
+                    <div class="p-contact__field">
+                      <div class="p-contact__label-row">
+                        <span class="p-contact__label">ご連絡のご希望</span>
+                        <span class="p-contact__required p-contact__required--alert" aria-hidden="true">必須</span>
+                      </div>
+
+                      <div class="p-contact__choices" role="radiogroup" aria-label="ご連絡のご希望">
+                        <label class="p-contact__choice">
+                          <input class="p-contact__radio" type="radio" name="ご連絡のご希望" value="お電話" required>
+                          <span class="p-contact__choice-box" aria-hidden="true"></span>
+                          <span class="p-contact__choice-label">お電話</span>
+                        </label>
+                        <label class="p-contact__choice">
+                          <input class="p-contact__radio" type="radio" name="ご連絡のご希望" value="メール">
+                          <span class="p-contact__choice-box" aria-hidden="true"></span>
+                          <span class="p-contact__choice-label">メール</span>
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="p-contact__field">
+                      <div class="p-contact__label-row">
+                        <label class="p-contact__label" for="inq-message">お問い合わせ内容</label>
+                        <span class="p-contact__required p-contact__required--alert" aria-hidden="true">必須</span>
+                      </div>
+                      <textarea class="p-contact__textarea p-contact__textarea--lg" id="inq-message" name="お問い合わせ内容" rows="6" placeholder="お問い合わせ内容をご入力ください" required></textarea>
+                    </div>
+                  </div>
+
+                  <div class="p-contact__agreements">
+                    <div class="p-contact__agree">
+                      <label class="p-contact__check">
+                        <input class="p-contact__checkbox" type="checkbox" name="同意（個人情報）" value="同意" required>
+                        <span class="p-contact__check-box" aria-hidden="true"></span>
+                        <span class="p-contact__check-label">個人情報の取扱に同意します。</span>
+                      </label>
+                      <div class="p-contact__policy" role="region" aria-label="個人情報の取扱">
+                        <p class="p-contact__policy-text">
+                          （個人情報の管理）
+
+                          1．弊社は、申込者の個人情報（個人情報の保護に関する法律に定義されるもの）を、
+                          　 弊社のプライバシーポリシーに基づき適切に取り扱うものとし、申込者はこれに同意したものとみなします。
+
+                          2．弊社は、申込者から取得した個人情報（会社名、氏名、電話番号、メールアドレス等、申込時に記載された項目）を保有します。
+
+                          3．弊社は、取得した個人情報を、契約の検討・履行および弊社の営業活動（郵送物、電話、電子メールによる案内・連絡等）の目的で利用します。
+
+                          4．弊社は、以下のとおり個人情報を共同利用する場合があります。
+                          （1）共同利用する個人情報の項目：前項に記載の個人情報
+                          （2）共同利用の目的：前項に記載の利用目的
+                          （3）共同利用する者の範囲：ヤマタネグループ各社および利用目的達成に必要な範囲の相手先
+                          （4）当該個人データの管理責任者：弊社
+
+                          5．弊社は、本サービスの履行に必要な範囲において、機密保持契約を締結した第三者に対し、申込者の個人情報を提供する場合があります。
+                        </p>
+                      </div>
                     </div>
                   </div>
 
@@ -652,6 +735,11 @@
     
   </main>
   <footer class="p-footer">
+    <div class="p-footer__top">
+      <a href="#" class="p-footer__top-btn js-pagetop" aria-label="ページ上部へ戻る">
+        <img decoding="async" loading="lazy" src="./images/common/totop.png" alt="トップへ戻る" width="60" height="60">
+      </a>
+    </div>
     <div class="l-inner">
       <div class="p-footer__content">
         <a class="p-footer__logo" href="#">

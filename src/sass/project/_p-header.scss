@@ -52,6 +52,7 @@
     gap: rem(12);
     color: $white;
     font-weight: 800;
+    position: relative;
     
   }
 }
@@ -68,7 +69,13 @@
 .p-header__btn-icon {
   width: rem(27);
   height: rem(27);
-  display: inline-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  right: rem(20);
+  transform: translateY(-50%);
 }
 
 .p-header__btn-icon img {

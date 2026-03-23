@@ -20,13 +20,19 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  width: rem(113);
   height: auto;
   aspect-ratio: 113 / 200;
   object-fit: cover;
-  top: rem(-64);
-  right: rem(-16);
   mix-blend-mode: multiply;
+  width: rem(76);
+  top: rem(-40);
+  right: rem(-0);
+  @include mq(md){
+    width: rem(113);
+    top: rem(-64);
+    right: rem(-16);
+    
+  }
 }
 
 .p-down__box {
