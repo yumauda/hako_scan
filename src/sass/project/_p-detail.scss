@@ -60,17 +60,14 @@
 .p-detail__items {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: rem(16);
 
   @include mq("md") {
     grid-template-columns: repeat(5, 1fr);
-    gap: 0;
   }
 }
 
 .p-detail__item {
   background-color: $white;
-  border-radius: rem(16);
   padding: rem(18) rem(12);
   display: grid;
   justify-items: center;
@@ -93,6 +90,16 @@
 .p-detail__item:nth-child(10) {
   @include mq(md) {
     border-right: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .p-detail__item:nth-child(odd) {
+    border-right: 1px dashed #005d97;
+  }
+
+  .p-detail__item:nth-child(n + 3) {
+    border-top: 1px dashed #005d97;
   }
 }
 
