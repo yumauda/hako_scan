@@ -518,7 +518,7 @@
                       <input class="p-contact__input" id="apply-company" name="会社名" type="text" placeholder="例）株式会社ヤマタネ" autocomplete="organization" required>
                     </div>
 
-                    <div class="p-contact__field">
+                    <div class="p-contact__field p-contact__field--address">
                       <div class="p-contact__label-row">
                         <label class="p-contact__label" for="apply-address">住所</label>
                       </div>
@@ -635,7 +635,7 @@
                       <input class="p-contact__input" id="inq-company" name="会社名" type="text" placeholder="例）株式会社ヤマタネ" autocomplete="organization" required>
                     </div>
 
-                    <div class="p-contact__field">
+                    <div class="p-contact__field p-contact__field--address">
                       <div class="p-contact__label-row">
                         <label class="p-contact__label" for="inq-address">住所</label>
                         <span class="p-contact__required p-contact__required--alert" aria-hidden="true">必須</span>
@@ -675,8 +675,9 @@
                     </div>
 
                     <div class="p-contact__field">
-                      <fieldset class="p-contact__fieldset">
-                        <legend class="p-contact__label">ご連絡のご希望</legend>
+                      <div class="p-contact__label-row">
+                        <span class="p-contact__label">ご連絡のご希望</span>
+                      </div>
 
                       <div class="p-contact__choices">
                         <label class="p-contact__choice">
@@ -690,7 +691,6 @@
                           <span class="p-contact__choice-label">メール</span>
                         </label>
                       </div>
-                      </fieldset>
                     </div>
 
                     <div class="p-contact__field">

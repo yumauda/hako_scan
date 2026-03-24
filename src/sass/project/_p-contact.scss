@@ -196,6 +196,16 @@
   gap: rem(30);
 }
 
+.p-contact__field--address {
+  align-items: start;
+}
+
+.p-contact__field--address .p-contact__label-row {
+  @include mq("md") {
+    padding-top: rem(8);
+  }
+}
+
 .p-contact__field--short .p-contact__input--short {
   max-width: rem(180);
 }
@@ -386,7 +396,7 @@
   padding-left: rem(15);
   padding-right: rem(15);
   padding-bottom: rem(15);
-  margin-top: rem(16);;
+  margin-top: rem(16);
 
   @include mq(md) {
     padding-top: rem(12);
@@ -410,6 +420,26 @@
   padding: 0;
   margin: 0;
   min-inline-size: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: rem(10);
+  align-items: start;
+
+  // `.p-contact__field`（2カラムグリッド）の中で全幅にする
+  grid-column: 1 / -1;
+
+  @include mq("md") {
+    grid-template-columns: rem(184) 1fr;
+    gap: rem(30);
+    align-items: center;
+  }
+}
+
+.p-contact__fieldset > legend {
+  padding: 0;
+  margin: 0;
+  float: none;
 }
 
 .p-contact__choices {
@@ -417,6 +447,10 @@
   flex-wrap: wrap;
   gap: rem(24);
   align-items: center;
+
+  @include mq("md") {
+    justify-content: flex-start;
+  }
 }
 
 .p-contact__choice {
