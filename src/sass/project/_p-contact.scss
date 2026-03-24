@@ -78,8 +78,8 @@
   padding: rem(28) rem(20) rem(64);
   border-radius: rem(30);
   margin-top: rem(60);
-  
-  
+
+
   @include mq("md") {
     border-radius: rem(60);
     margin-top: rem(84);
@@ -124,10 +124,11 @@
   padding-bottom: rem(13);
   padding-left: rem(10);
   padding-right: rem(10);
-  @include mq(md){
+
+  @include mq(md) {
     padding: rem(16) rem(24);
     font-size: rem(20);
-    
+
   }
 }
 
@@ -139,12 +140,13 @@
   margin-top: rem(24);
   color: #e5005a;
   font-weight: $bold;
-  font-size: rem(16);
+  font-size: rem(15);
   letter-spacing: 0.05em;
   line-height: 1.5;
   text-align: center;
 
   @include mq(md) {
+    font-size: rem(16);
     margin-top: rem(80);
   }
 }
@@ -170,15 +172,21 @@
   display: grid;
   margin-top: rem(40);
   gap: rem(32);
-  @include mq(md){
+
+  @include mq(md) {
     gap: rem(56);
-    
+
   }
 }
 
 .p-contact__fields {
   display: grid;
-  gap: rem(30);
+  gap: rem(16);
+
+  @include mq(md) {
+    gap: rem(30);
+
+  }
 }
 
 .p-contact__field {
@@ -277,26 +285,43 @@
 .p-contact__agreements {
   display: grid;
   gap: rem(32);
-  @include mq(md){
+
+  @include mq(md) {
     gap: rem(16);
-    
+
+  }
+}
+
+.mt16 {
+  margin-top: rem(16);
+}
+
+.mt56 {
+  margin-top: rem(32);
+
+  @include mq(md) {
+
+    margin-top: rem(56);
   }
 }
 
 .p-contact__agree {
   display: grid;
-  gap: rem(16);
   justify-items: start;
 }
 
 .p-contact__check {
   display: flex;
-  align-items: center;
   justify-content: center;
   width: fit-content;
   margin-left: auto;
   margin-right: auto;
   gap: rem(12);
+
+  @include mq(md) {
+    align-items: center;
+
+  }
 }
 
 .p-contact__checkbox {
@@ -338,9 +363,17 @@
 
 .p-contact__agree-text {
   font-weight: 500;
-  font-size: rem(15);
   line-height: 1.5;
   letter-spacing: 0.05em;
+  font-size: rem(14);
+  text-indent: -1em;
+  padding-left: 1em;
+
+  @include mq(md) {
+    font-size: rem(15);
+
+  }
+
 }
 
 .p-contact__policy {
@@ -353,12 +386,14 @@
   padding-left: rem(15);
   padding-right: rem(15);
   padding-bottom: rem(15);
-  @include mq(md){
+  margin-top: rem(16);;
+
+  @include mq(md) {
     padding-top: rem(12);
     padding-bottom: rem(24);
     padding-left: rem(30);
     padding-right: rem(30);
-    
+
   }
 }
 
@@ -368,6 +403,13 @@
   line-height: 1.5;
   letter-spacing: 0.05em;
   white-space: pre-line;
+}
+
+.p-contact__fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-inline-size: 0;
 }
 
 .p-contact__choices {
@@ -435,6 +477,13 @@
   color: $white;
   cursor: pointer;
   position: relative;
+  margin-top: rem(24);
+
+}
+
+.p-contact__submit:disabled {
+  background-color: #bdbdbd;
+  cursor: not-allowed;
 }
 
 .p-contact__submit-text {
@@ -444,21 +493,41 @@
 }
 
 .p-contact__submit-icon {
-  width: rem(35);
-  height: rem(35);
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
   top: 50%;
-  right: rem(40);
   transform: translateY(-50%);
+  width: rem(30);
+  height: rem(30);
+  right: rem(26);
+  @include mq(md){
+    width: rem(35);
+    height: rem(35);
+    right: rem(40);
+    
+  }
 }
 
 .p-contact__submit-icon img {
   width: 100%;
   height: 100%;
   display: block;
+}
+
+.p-contact__submit-note {
+  margin-top: rem(12);
+  text-align: center;
+  font-weight: 700;
+  font-size: rem(14);
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  color: #005d97;
+
+  @include mq(md) {
+    font-size: rem(16);
+  }
 }
 
 @include mq("md") {

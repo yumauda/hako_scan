@@ -66,7 +66,7 @@
 }
 
 .p-step__title span {
-  color: #54C3F1;
+  // color: #54C3F1;
 }
 
 .p-step__items {
@@ -169,6 +169,7 @@
   z-index: 2;
   text-align: center;
   width: rem(62);
+  --width: 0%;
 }
 
 .p-step__tag::after {
@@ -180,6 +181,8 @@
   height: rem(6);
   background-color: #fff100;
   z-index: -1;
+  width: var(--width);
+  
 }
 
 .p-step__img {

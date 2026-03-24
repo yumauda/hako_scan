@@ -25,6 +25,7 @@
   object-fit: cover;
   left: rem(-20);
   bottom: rem(-64);
+  z-index: 3;
   @include mq(md){
     width: rem(295);
     bottom: rem(-80);
@@ -46,7 +47,7 @@
 }
 
 .p-detail__title span {
-  color: #54c3f1;
+  // color: #54c3f1;
 }
 
 .p-detail__box {
@@ -128,6 +129,7 @@
   font-size: 0.7em;
   vertical-align: super;
   margin-left: rem(2);
+  font-size: rem(12);
 }
 
 .p-detail__footnotes {
@@ -145,7 +147,7 @@
 }
 
 .p-detail__bottom {
-  margin-top: rem(32);
+  margin-top: rem(48);
   display: flex;
   justify-content: center;
 
@@ -160,7 +162,10 @@
   max-width: rem(800);
   border: rem(2) solid #005d97;
   border-radius: rem(40);
-  padding: rem(20) rem(18);
+  padding-top: rem(40);
+  padding-bottom: rem(48);
+  padding-left: rem(16);
+  padding-right: rem(16);
   position: relative;
 
   @include mq("md") {
@@ -168,13 +173,20 @@
   }
 }
 
+.p-detail__attention-head {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: rem(12);
+
+  @include mq("md") {
+  }
+}
+
 .p-detail__attention-icon {
   width: rem(24);
   height: rem(24);
   display: block;
-  position: absolute;
-  top: rem(22);
-  left: rem(24);
 }
 
 .p-detail__attention-title {
@@ -183,20 +195,33 @@
   font-size: rem(18);
   line-height: 1.5;
   letter-spacing: 0.05em;
-  padding-left: rem(36);
 
   @include mq("md") {
     font-size: rem(20);
   }
 }
 
-.p-detail__attention-text {
-  margin-top: rem(12);
+.p-detail__attention-list {
+  margin-top: rem(16);
+  text-align: left;
+  display: grid;
+}
+
+.p-detail__attention-item {
   font-weight: 500;
-  font-size: rem(13);
+  font-size: rem(15);
   line-height: 1.7;
+  padding-left: 1.2em;
+  position: relative;
 
   @include mq("md") {
     font-size: rem(14);
   }
+}
+
+.p-detail__attention-item::before {
+  content: "・";
+  position: absolute;
+  left: 0;
+  top: 0;
 }
