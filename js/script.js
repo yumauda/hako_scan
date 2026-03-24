@@ -209,7 +209,11 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       sessionStorage.removeItem(SCROLL_KEY);
       if (Number.isFinite(y)) {
         requestAnimationFrame(function () {
+          const html = document.documentElement;
+          const prev = html.style.scrollBehavior;
+          html.style.scrollBehavior = 'auto';
           window.scrollTo(0, y);
+          html.style.scrollBehavior = prev;
         });
       }
     } catch (e) {
