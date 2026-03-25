@@ -218,6 +218,8 @@ if(isset($_POST['form_type'])) {
 		$subject = 'かんたん箱スキャンからお問い合わせ';
 		$re_subject = '【かんたんはこスキャン】お問い合わせを受け付けました';
 			$thanksPage = './?sent=inquiry';
+		// お問い合わせ時の社内共有先を追加
+		$to = $to . ',infoydm@yamatanedm.co.jp,sales@kyokuto-ymt.jp';
 	}
 }
 
